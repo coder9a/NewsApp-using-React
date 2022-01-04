@@ -1,8 +1,20 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import NewsItem from './NewsItem'
 import Spinner from './Spinner';
 
 export class News extends Component {
+    static defaultProps = {
+        country: 'in',
+        pageSize: 8,
+        category: PropTypes.string,
+    }
+
+    static propTypes = {
+        country: PropTypes.string,
+        pageSize: PropTypes.number,
+    }
+
     articles = [
         {
             "source": {
@@ -54,47 +66,44 @@ export class News extends Component {
         }
     }
 
-    async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=b8b86f4eb0234c9f8ac3ae9873001dd2&page=1&pageSize=${this.props.pageSize}`;
-        let data = await fetch(url);
-        let parsedData = await data.json()
-        this.setState({ articles: parsedData.articles })
-    }
-
-    handlePreviousClick = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=b8b86f4eb0234c9f8ac3ae9873001dd2&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+    async updateNews() {
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.props.page}&pageSize=${this.props.pageSize}`;
+        // const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        // const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=b8b86f4eb0234c9f8ac3ae9873001dd2&page=${this.props.page}&pageSize=${this.props.pageSize}`;
+        this.setState({ loading: true })
         let data = await fetch(url);
         let parsedData = await data.json()
         this.setState({
-            page: this.state.page - 1,
-            articles: parsedData.articles
+            articles: parsedData.articles,
+            totalResults: parsedData.totalResults,
+            loading: false
         })
     }
 
+    async componentDidMount() {
+        this.updateNews();
+    }
+
+    handlePreviousClick = async () => {
+        this.setState({ page: this.state.page - 1 });
+        this.updateNews();
+    }
+
     handleNextClick = async () => {
-        if (this.state.page + 1 > Math.ceil(this.state.totalPages / this.props.pageSize)) {
-            
-        }
-        else {
-            let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=b8b86f4eb0234c9f8ac3ae9873001dd2&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
-            let data = await fetch(url);
-            let parsedData = await data.json()
-            this.setState({
-                page: this.state.page + 1,
-                articles: parsedData.articles
-            })
-        }
+        this.setState({ page: this.state.page + 1 });
+        this.updateNews();
     }
 
     render() {
         return (
-            <div className="container">
-                <Spinner/>
-                <h2>NewsMonkey - Top Headlines</h2>
+            <div className="container text-center my-3">
+                <h1>NewsMonkey - Top Headlines</h1>
+                {this.state.loading && <Spinner />}
                 <div className="row">
-                    {this.state.articles.map((element) => {
+                    {!this.state.loading && this.state.articles.map((element) => {
                         return <div className="col-md-4" key={element.url}>
-                            <NewsItem title={element.title ? element.title.slice(0, 45) : ""} description={element.description ? element.description.slice(0, 88) : ""} imageUrl={element.urlToImage} newsUrl={element.url} />
+                            <NewsItem title={element.title ? element.title.slice(0, 45) : ""} description={element.description ? element.description.slice(0, 88) : ""}
+                                imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
                         </div>
                     })}
                 </div>
