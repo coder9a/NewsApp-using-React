@@ -1,5 +1,110 @@
 {
     "status": "ok",
-    "totalResults": 4,
-    
+    "totalResults": 359,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Gizmodo.com"
+            },
+            "author": "Lucas Ropek",
+            "title": "FTC to Companies: Patch Log4j ASAP or Suffer Our Wrath",
+            "description": "The Federal Trade Commission has a message for companies that aren’t taking the threat posed by log4j to heart: Patch up or lawyer up. Consider yourselves warned.Read more...",
+            "url": "https://gizmodo.com/ftc-to-companies-patch-log4j-asap-or-suffer-our-wrath-1848303300",
+            "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/1915b28813e28dab3c5a834610e14f9d.jpg",
+            "publishedAt": "2022-01-05T02:05:00Z",
+            "content": "The Federal Trade Commission has a message for companies that arent taking the threat posed by log4j to heart: Patch up or lawyer up. Consider yourselves warned.\r\nBy now, youve surely heard of the af… [+2589 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": null,
+            "title": "Taiwan December exports seen up for 18th straight month - Reuters",
+            "description": "Taiwan's exports likely rose for the 18th straight month in December, a Reuters poll showed, boosted by sustained demand for chips and hi-tech gadgets and the year-end shopping season.",
+            "url": "https://www.reuters.com/markets/asia/taiwan-december-exports-seen-up-18th-straight-month-2022-01-05/",
+            "urlToImage": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.png?d=66",
+            "publishedAt": "2022-01-05T03:58:00Z",
+            "content": "TAIPEI, Jan 5(Reuters) - Taiwan's exports likely rose for the 18th straight month in December, a Reuters poll showed, boosted by sustained demand for chips and hi-tech gadgets and the year-end shoppi… [+1117 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": null,
+            "title": "Startup ONE says battery prototype delivered 750-mile range - Reuters",
+            "description": "Our Next Energy (ONE), a two-year-old Michigan startup, said on Wednesday it had tested a prototype of its new battery in a Tesla Model S, driving 752 miles (1,210 kilometers) before recharging.",
+            "url": "https://www.reuters.com/technology/startup-one-says-battery-prototype-delivered-750-mile-range-2022-01-05/",
+            "urlToImage": "https://www.reuters.com/resizer/IURgb7y7uThKC_RTSTxu2FpM8ww=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/JFSVVADVAJICJPHW75MH5SN5PE.jpg",
+            "publishedAt": "2022-01-05T05:14:00Z",
+            "content": "DETROIT, Jan 5 (Reuters) - Our Next Energy (ONE), a two-year-old Michigan startup, said on Wednesday it had tested a prototype of its new battery in a Tesla Model S, driving 752 miles (1,210 kilomete… [+1813 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MacRumors"
+            },
+            "author": "Joe Rossignol",
+            "title": "Kuo: Apple's AR/VR Headset to Feature 'Pancake Lenses' Allowing for Lighter and More Compact Design",
+            "description": "Apple's widely-rumored AR/VR headset is coming at the end of 2022, with shipments to ramp up in the first quarter of 2023, according to analyst Ming-Chi Kuo. \n\n\n\n\n\nIn a research note with TF International Securities, obtained by MacRumors, Kuo said Apple's he…",
+            "url": "https://www.macrumors.com/2022/01/05/kuo-apple-headset-pancake-lenses/",
+            "urlToImage": "https://images.macrumors.com/t/4M5CqIlQyUKDIGHeeuAq-WaZYxI=/2006x/article-new/2021/03/apple-mixed-reality-headset-mockup-feature-purple.jpg",
+            "publishedAt": "2022-01-05T05:29:04Z",
+            "content": "Apple's widely-rumored AR/VR headset is coming at the end of 2022, with shipments to ramp up in the first quarter of 2023, according to analyst Ming-Chi Kuo. \r\nIn a research note with TF Internationa… [+640 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MacRumors"
+            },
+            "author": "Juli Clover",
+            "title": "CES 2022: Belkin Debuts New Find My-Compatible Soundform Noise Cancelling Earbuds",
+            "description": "Belkin today introduced new high-end Soundform earbuds, which offer Hybrid Active Noise Cancellation and integration with Apple's Find My app.\n\n\n\n\n\nAccording to Belkin, the Soundform Immerse Noise Cancelling Earbuds are the company's top-of-the-line audio sol…",
+            "url": "https://www.macrumors.com/2022/01/04/belkin-soundform-find-my-earbuds/",
+            "urlToImage": "https://images.macrumors.com/t/Z-x4SWSpThzWVShttOPjIzXaOhc=/2000x/article-new/2021/12/belkin-soundform-earbuds-anc-2.jpg",
+            "publishedAt": "2022-01-05T03:02:00Z",
+            "content": "Belkin today introduced new high-end Soundform earbuds, which offer Hybrid Active Noise Cancellation and integration with Apple's Find My app.\r\nAccording to Belkin, the Soundform Immerse Noise Cancel… [+1245 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MacRumors"
+            },
+            "author": "Juli Clover",
+            "title": "CES 2022: Wemo Lineup Gains HomeKit Secure Video-Compatible Smart Doorbell",
+            "description": "Belkin's Wemo brand is gaining a new Wemo Smart Video Doorbell, which is a camera-equipped doorbell option that supports HomeKit Secure Video. The Wemo Smart Video Doorbell offers a 4-megapixel high-resolution camera with a 178-degree field of view, zoom func…",
+            "url": "https://www.macrumors.com/2022/01/04/wemo-homekit-video-doorbell/",
+            "urlToImage": "https://images.macrumors.com/t/T8hRNkatklh-y7krnePDI34-6Ms=/2000x/article-new/2021/12/belkin-wemo-doorbell.jpg",
+            "publishedAt": "2022-01-05T03:00:00Z",
+            "content": "Belkin's Wemo brand is gaining a new Wemo Smart Video Doorbell, which is a camera-equipped doorbell option that supports HomeKit Secure Video. The Wemo Smart Video Doorbell offers a 4-megapixel high-… [+1723 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Xataka.com"
+            },
+            "author": "Ricardo Aguilar",
+            "title": "OnePlus 10 Pro: una bestia de gama alta que carga más rápido que nunca",
+            "description": "OnePlus acaba de anunciar las principales especificaciones y características del OnePlus 10 Pro, su modelo más alto de gama para 2022. Se trata de una evolución respecto al OnePlus 9 Pro que vimos el año pasado, repitiendo con Hasselblad para la cámara y mont…",
+            "url": "https://www.xataka.com/moviles/oneplus-10-pro-caracteristicas-precio-ficha-tecnica",
+            "urlToImage": "https://i.blogs.es/8028cb/2-green-headshot/840_560.jpg",
+            "publishedAt": "2022-01-05T01:00:28Z",
+            "content": "OnePlus acaba de anunciar las principales especificaciones y características del OnePlus 10 Pro, su modelo más alto de gama para 2022. Se trata de una evolución respecto al OnePlus 9 Pro que vimos el… [+2636 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "heise online"
+            },
+            "author": "Christof Windeck",
+            "title": "Bit-Rauschen, der Prozessor-Podcast: Diese Chips werden 2022 wichtig",
+            "description": "Neues Jahr, neue Chips: Im Audio-Podcast Bit-Rauschen 2022/1 blicken wir voraus, welche Prozessoren und Grafikchips AMD, Intel, Apple, Nvidia & Co 2022 bringen.",
+            "url": "https://www.heise.de/meinung/Bit-Rauschen-der-Prozessor-Podcast-Diese-Chips-werden-2022-wichtig-6203431.html",
+            "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/3/1/7/5/5/2/8/Bit-Rauschen-Podcast_Folge_1-6efc0df01acc9926.jpeg",
+            "publishedAt": "2022-01-05T05:30:00Z",
+            "content": "Bit-Rauschen der Prozessor-Podcast von ct\r\nDen zweiwöchentlichen Prozessor-Podcast von ct gibt es ...\r\nDie Messe CES in Las Vegas eröffnet auch 2022 den jährlichen Reigen an Veranstaltungen, auf dene… [+1087 chars]"
+        },
+    ]
 }
