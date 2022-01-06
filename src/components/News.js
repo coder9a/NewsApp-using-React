@@ -32,31 +32,32 @@ export class News extends Component {
         document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsMonkey`;
     }
     fetchMoreData = async () => {
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&    category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&    category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         // const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=6f0e5af282574fffb7cdc43d4acdd034&page=${this.props.page}&pageSize=${this.props.pageSize}`;
-        // this.setState({ loading: true });
         let data = await fetch(url);
         let parsedData = await data.json()
         this.setState({
             articles: this.state.articles.concat(parsedData.articles),
             totalResults: parsedData.totalResults,
-            // loading: false
         })
     };
 
 
     async updateNews() {
+        this.props.setProgress(10);
         this.setState({ page: this.state.page + 1 })
-        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&    category=${this.props.category}&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&    category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         // const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=6f0e5af282574fffb7cdc43d4acdd034&page=${this.props.page}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true });
         let data = await fetch(url);
+        this.props.setProgress(40);
         let parsedData = await data.json()
         this.setState({
             articles: parsedData.articles,
             totalResults: parsedData.totalResults,
             loading: false
         })
+        this.props.setProgress(100);
     }
 
     async componentDidMount() {
